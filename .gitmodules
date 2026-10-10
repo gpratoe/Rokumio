@@ -1,0 +1,6 @@
+[submodule "rokumio-client"]
+	path = rokumio-client
+	url = https://github.com/gpratoe/rokumio-client.git
+[submodule "rokumio-service"]
+	path = rokumio-service
+	url = https://github.com/gpratoe/rokumio-service.git
