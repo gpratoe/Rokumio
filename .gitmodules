@@ -1,6 +1,8 @@
 [submodule "rokumio-client"]
 	path = rokumio-client
 	url = https://github.com/gpratoe/rokumio-client.git
+	branch = main
 [submodule "rokumio-service"]
 	path = rokumio-service
 	url = https://github.com/gpratoe/rokumio-service.git
+	branch = main
