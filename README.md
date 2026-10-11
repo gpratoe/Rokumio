@@ -39,28 +39,28 @@ path** used only by the Android companion.
 
 ```
                   catalogs · metadata · stream URLs (HTTP)
-      ┌──────────────┐ ◀───────────────────────────────────────────┐
-      │   ADDONS     │                                             │
-      │  Cinemeta    │                                             │
-      │  OpenSubtitles                                             │
-      │  + your own  │                                             │
-      └──────────────┘                                             │
+      ┌───────────────┐ ◀──────────────────────────────────────────┐
+      │   ADDONS      │                                            │
+      │  Cinemeta     │                                            │
+      │  OpenSubtitles|                                            │
+      │  + your own   │                                            │
+      └───────────────┘                                            │
                                                                    │
       ╔═══════════════════════════════╗                            │
       ║   Roku TV — rokumio-client    ║ ◀──────────────────────────┘
       ║   Home · Search · Discover    ║
       ║   Details · Streams · Player  ║
-      ╚════════╤═════════════════════╝
+      ╚════════╤══════════════════════╝
                │ ▲
    torrent     │ │   HLS (H.264 / AAC)
    requested   │ │
    (infoHash,  │ │
     fileIdx)   ▼ │
       ╔═════════════════════════════════════════╗
-      ║   Streaming server (you configure)       ║
-      ║   rokumio-service on a phone, or         ║
-      ║   stremio-service on a desktop           ║
-      ║   runs server.js + Node + ffmpeg         ║
+      ║   Streaming server (you configure)      ║
+      ║   rokumio-service on a phone, or        ║
+      ║   stremio-service on a desktop          ║
+      ║   runs server.js + Node + ffmpeg        ║
       ╚════════════════════╤════════════════════╝
                            ▼
                     peer swarm / trackers
@@ -77,11 +77,11 @@ Roku-playable URL may be played by the client without the server.)
 ### Setup / control path (Android companion)
 
 ```
-   ┌──────────────────────────────┐   ECP / DIAL over your LAN   ┌────────────────────┐
+   ┌──────────────────────────────┐   ECP / DIAL over your LAN   ┌─────────────────────┐
    │  Android — rokumio-service   │ ───────────────────────────▶ │   Roku client       │
    │  runs the streaming server,  │  pushes installed addon URLs │   applies addons +  │
    │  manages addons, finds Rokus │  + the server's LAN address  │   server address    │
-   └──────────────────────────────┘                              └────────────────────┘
+   └──────────────────────────────┘                              └─────────────────────┘
 ```
 
 **In words:** the Android app is an optional convenience. It hosts the streaming
